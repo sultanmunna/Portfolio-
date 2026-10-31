@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sultan Mahmud Munna — Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Full-Stack Developer building reliable web applications, cloud infrastructure, and developer tools."
+    />
+    <meta name="author" content="Sultan Mahmud Munna" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark" : true;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="logo">SM</a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#works" class="nav-link">Works</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            href="https://github.com/sultanmunna"
+            class="icon-link"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <a href="mailto:alex.carter@example.com" class="icon-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" /><path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" /><path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1 class="hero-title reveal">Sultan Mahmud Munna</h1>
+          <p class="hero-role reveal" data-delay="100">Full-Stack Developer</p>
+          <p class="hero-desc reveal" data-delay="200">
+            I build dependable software end to end — from cloud infrastructure
+            and APIs to polished, fast user interfaces. 6+ years of experience
+            across product teams of every size.
+          </p>
+          <div class="hero-actions reveal" data-delay="300">
+            <a href="#works" class="btn btn-primary">
+              View Work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14" /><path d="m19 12-7 7-7-7" />
+              </svg>
+            </a>
+            <a href="resume.pdf" class="btn btn-outline">Download Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container-narrow">
+          <h2 class="section-title reveal">About</h2>
+          <p class="lead reveal" data-delay="100">
+            Full-stack developer with 6+ years of experience building web
+            applications from database to UI. I care about clean architecture,
+            fast feedback loops, and shipping things that hold up in production.
+          </p>
+          <p class="lead reveal" data-delay="150">
+            Most recently I've been leading small product teams, setting up
+            cloud infrastructure, and automating everything that runs more than
+            twice.
+          </p>
+
+          <h3 class="skills-title reveal">Skills</h3>
+          <div class="skills-grid">
+            <div class="skill reveal">
+              <h4>Cloud &amp; DevOps</h4>
+              <p>AWS, GCP, Docker, Kubernetes, Terraform, CI/CD (GitHub Actions), Linux, Monitoring &amp; Logging</p>
+            </div>
+            <div class="skill reveal" data-delay="100">
+              <h4>Backend Development</h4>
+              <p>Node.js, Python, PostgreSQL, MongoDB, Redis, REST &amp; GraphQL APIs</p>
+            </div>
+            <div class="skill reveal" data-delay="150">
+              <h4>Frontend Development</h4>
+              <p>React, Next.js, TypeScript, Tailwind CSS, Vue</p>
+            </div>
+            <div class="skill reveal" data-delay="200">
+              <h4>Mobile Development</h4>
+              <p>React Native, Flutter</p>
+            </div>
+            <div class="skill reveal" data-delay="250">
+              <h4>Security</h4>
+              <p>OAuth2, JWT, SSO, Secrets Management, Secure Coding Practices</p>
+            </div>
+            <div class="skill reveal" data-delay="300">
+              <h4>Leadership &amp; Management</h4>
+              <p>Agile Planning, Team Leadership, Mentoring &amp; Coaching, Hiring</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="container-narrow">
+          <h2 class="section-title reveal">Experience</h2>
+
+          <article class="job reveal" data-delay="100">
+            <h3 class="job-title">Senior Software Engineer</h3>
+            <p class="job-company">TechCorp Inc.</p>
+            <p class="job-dates">January 2023 - Present</p>
+            <ul class="job-points">
+              <li>Designed and scaled a multi-region cloud setup serving 50,000+ monthly active users</li>
+              <li>Built CI/CD pipelines that took releases from weekly manual deploys to same-day automated ones</li>
+              <li>Introduced observability tooling that cut mean time to recovery from hours to minutes</li>
+              <li>Led a team of five engineers across two product squads</li>
+            </ul>
+          </article>
+
+          <article class="job reveal" data-delay="150">
+            <h3 class="job-title">Software Developer</h3>
+            <p class="job-company">Bright Labs</p>
+            <p class="job-dates">March 2020 - December 2022</p>
+            <ul class="job-points">
+              <li>Shipped customer-facing features across a React frontend and Node.js backend used by 10k+ users</li>
+              <li>Migrated a legacy monolith to containerized services, reducing hosting costs by 35%</li>
+              <li>Built internal tooling that saved the support team 15+ hours a week</li>
+              <li>Mentored two junior developers through their first production releases</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Works -->
+      <section id="works" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Works</h2>
+          <div class="filters reveal" data-delay="100" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="open-source" aria-pressed="false">Open Source</button>
+            <button class="filter-btn" data-filter="enterprise" aria-pressed="false">Enterprise</button>
+          </div>
+
+          <div class="works-grid">
+            <article class="card work-card reveal" data-category="enterprise">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://example.com" target="_blank" rel="noreferrer">
+                    Nimbus Cloud Platform
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Enterprise</span>
+              </div>
+              <p class="card-meta">Lead Engineer • 2024-02 - Present</p>
+              <p class="card-desc">
+                A multi-tenant cloud platform for managing customer workloads.
+                Designed the infrastructure, the deployment pipeline, and the
+                web dashboard used by operations teams every day.
+              </p>
+              <div class="tags">
+                <span>AWS</span><span>Kubernetes</span><span>Terraform</span>
+                <span>React</span><span>Node.js</span><span>PostgreSQL</span>
+              </div>
+              <ul class="card-points">
+                <li>99.95% uptime across multi-region deployments</li>
+                <li>Deploy times cut from 40 minutes to under 5</li>
+                <li>Autoscaling that survived a 10x traffic spike uneventfully</li>
+              </ul>
+            </article>
+
+            <article class="card work-card reveal" data-category="enterprise" data-delay="100">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://example.com" target="_blank" rel="noreferrer">
+                    LedgerFlow ERP Suite
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Enterprise</span>
+              </div>
+              <p class="card-meta">Full-Stack Engineer • 2023-05 - 2024-01</p>
+              <p class="card-desc">
+                An ERP suite covering invoicing, inventory, and reporting for
+                small manufacturers. Owned the full stack from database schema
+                to the dashboard UI.
+              </p>
+              <div class="tags">
+                <span>React</span><span>Node.js</span><span>MySQL</span>
+                <span>Docker</span><span>CI/CD</span>
+              </div>
+              <ul class="card-points">
+                <li>Single-handedly owned frontend, backend, and delivery pipeline</li>
+                <li>Multi-tenant architecture supporting 40+ client organizations</li>
+                <li>Reporting queries optimized from minutes to seconds</li>
+              </ul>
+            </article>
+
+            <article class="card work-card reveal" data-category="enterprise" data-delay="150">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://example.com" target="_blank" rel="noreferrer">
+                    PulseChat Collaboration Suite
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Enterprise</span>
+              </div>
+              <p class="card-meta">Backend Developer • 2022-08 - 2023-04</p>
+              <p class="card-desc">
+                Real-time chat and file sharing for distributed teams, with
+                presence, read receipts, and offline sync.
+              </p>
+              <div class="tags">
+                <span>Node.js</span><span>WebSocket</span><span>Redis</span><span>MongoDB</span>
+              </div>
+              <ul class="card-points">
+                <li>Sub-100ms message delivery at the 99th percentile</li>
+                <li>Horizontal scaling to 20k concurrent connections</li>
+                <li>End-to-end encrypted direct messages</li>
+              </ul>
+            </article>
+
+            <article class="card work-card reveal" data-category="enterprise" data-delay="200">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://example.com" target="_blank" rel="noreferrer">
+                    TrailMate Mobile App
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Enterprise</span>
+              </div>
+              <p class="card-meta">Mobile Developer • 2021-06 - 2022-07</p>
+              <p class="card-desc">
+                Offline-first hiking companion with route tracking, trail maps,
+                and weather alerts. Built for areas with no signal at all.
+              </p>
+              <div class="tags">
+                <span>Flutter</span><span>Firebase</span><span>REST APIs</span>
+              </div>
+              <ul class="card-points">
+                <li>25,000+ downloads across app stores</li>
+                <li>Full offline mode with background sync</li>
+                <li>4.7-star average rating</li>
+              </ul>
+            </article>
+
+            <article class="card work-card reveal" data-category="open-source" data-delay="250">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://github.com/sultanmunna/devboard" target="_blank" rel="noreferrer">
+                    DevBoard
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Open Source</span>
+              </div>
+              <p class="card-desc">
+                A keyboard-driven personal kanban board that lives entirely in
+                a single local folder of plain text files. No account, no cloud.
+              </p>
+              <div class="repo-stats">
+                <span class="lang"><i class="lang-dot"></i>TypeScript</span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  24
+                </span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><circle cx="18" cy="6" r="3" />
+                    <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" /><path d="M12 12v3" />
+                  </svg>
+                  3
+                </span>
+              </div>
+              <div class="tags">
+                <span>kanban</span><span>productivity</span><span>local-first</span>
+              </div>
+            </article>
+
+            <article class="card work-card reveal" data-category="open-source" data-delay="300">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://github.com/sultanmunna/snippet-vault" target="_blank" rel="noreferrer">
+                    Snippet Vault
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Open Source</span>
+              </div>
+              <p class="card-desc">
+                An editor extension that keeps a searchable vault of code
+                snippets with tags, usage notes, and one-key insertion.
+              </p>
+              <div class="repo-stats">
+                <span class="lang"><i class="lang-dot"></i>TypeScript</span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  18
+                </span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><circle cx="18" cy="6" r="3" />
+                    <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" /><path d="M12 12v3" />
+                  </svg>
+                  2
+                </span>
+              </div>
+              <div class="tags">
+                <span>vscode</span><span>extension</span><span>snippets</span>
+              </div>
+            </article>
+
+            <article class="card work-card reveal" data-category="open-source" data-delay="350">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://github.com/sultanmunna/weatherlens" target="_blank" rel="noreferrer">
+                    WeatherLens
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Open Source</span>
+              </div>
+              <p class="card-desc">
+                A minimal weather app that answers one question well: do I need
+                a jacket in the next hour? Radar view included.
+              </p>
+              <div class="repo-stats">
+                <span class="lang"><i class="lang-dot"></i>Dart</span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  9
+                </span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><circle cx="18" cy="6" r="3" />
+                    <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" /><path d="M12 12v3" />
+                  </svg>
+                  1
+                </span>
+              </div>
+              <div class="tags">
+                <span>flutter</span><span>weather</span><span>open-data</span>
+              </div>
+            </article>
+
+            <article class="card work-card reveal" data-category="open-source" data-delay="400">
+              <div class="card-head">
+                <h3 class="card-title">
+                  <a href="https://github.com/sultanmunna/csv-forge" target="_blank" rel="noreferrer">
+                    CSV Forge
+                    <svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 3h6v6" /><path d="M10 14 21 3" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </h3>
+                <span class="badge">Open Source</span>
+              </div>
+              <p class="card-desc">
+                A tiny CLI for slicing, joining, and cleaning CSV files without
+                opening a spreadsheet. Streams files larger than memory.
+              </p>
+              <div class="repo-stats">
+                <span class="lang"><i class="lang-dot"></i>JavaScript</span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  6
+                </span>
+                <span class="stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><circle cx="18" cy="6" r="3" />
+                    <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" /><path d="M12 12v3" />
+                  </svg>
+                  0
+                </span>
+              </div>
+              <div class="tags">
+                <span>cli</span><span>csv</span><span>data-wrangling</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Blog</h2>
+          <p class="section-subtitle reveal" data-delay="100">Recent articles and thoughts</p>
+          <div class="blog-grid">
+            <article class="card blog-card reveal" data-delay="150">
+              <h3 class="card-title"><a href="blog.html">Notes on Shipping Side Projects</a></h3>
+              <p class="blog-meta">
+                <time datetime="2026-01-12">January 12, 2026</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  4 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                Everything I've learned from finishing (and abandoning) a dozen
+                side projects: scope, momentum, and knowing when to stop.
+              </p>
+              <div class="tags"><span>side-projects</span><span>productivity</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="200">
+              <h3 class="card-title"><a href="blog.html">Kubernetes Networking, Explained Gently</a></h3>
+              <p class="blog-meta">
+                <time datetime="2025-12-03">December 3, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  6 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                Services, ingress, and DNS in a Kubernetes cluster — what
+                actually happens when one pod calls another, minus the jargon.
+              </p>
+              <div class="tags"><span>kubernetes</span><span>networking</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="250">
+              <h3 class="card-title"><a href="blog.html">A Pragmatic Guide to Code Reviews</a></h3>
+              <p class="blog-meta">
+                <time datetime="2025-11-18">November 18, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  3 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                Reviews that catch real bugs without grinding momentum to a
+                halt — what to look at first, and what to let go.
+              </p>
+              <div class="tags"><span>career</span><span>best-practices</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="300">
+              <h3 class="card-title"><a href="blog.html">From Monolith to Modules: A Refactor Story</a></h3>
+              <p class="blog-meta">
+                <time datetime="2025-10-27">October 27, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  5 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                How we split a five-year-old codebase into modules without
+                freezing feature work for a quarter.
+              </p>
+              <div class="tags"><span>architecture</span><span>refactoring</span></div>
+            </article>
+          </div>
+          <div class="blog-more reveal" data-delay="350">
+            <a href="blog.html" class="btn btn-outline">
+              View All Posts
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section section-contact">
+        <div class="container contact-inner">
+          <h2 class="section-title reveal">Get In Touch</h2>
+          <p class="lead contact-lead reveal" data-delay="100">
+            I'm always happy to talk about new projects, interesting problems,
+            or opportunities. The fastest way to reach me is email.
+          </p>
+          <div class="contact-actions reveal" data-delay="200">
+            <a href="mailto:alex.carter@example.com" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Email Me
+            </a>
+            <a href="tel:+15551234567" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Call Me
+            </a>
+          </div>
+          <div class="socials reveal" data-delay="300">
+            <a href="https://github.com/sultanmunna" class="icon-link" aria-label="GitHub" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/sultanmunna" class="icon-link" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://x.com/sultanmunna" class="icon-link" aria-label="X (Twitter)" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+              </svg>
+            </a>
+            <a href="https://facebook.com/sultanmunna" class="icon-link" aria-label="Facebook" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Sultan Mahmud Munna</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://github.com/sultanmunna" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="blog.html">Blog</a>
+          <a href="mailto:alex.carter@example.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

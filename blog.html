@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Alex Carter</title>
+    <meta name="description" content="Articles and notes on software development. Placeholder content — replace with your own posts." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark" : true;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">AC</a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#works" class="nav-link">Works</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a href="https://github.com/alex-carter" class="icon-link" aria-label="GitHub" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <a href="mailto:alex.carter@example.com" class="icon-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" /><path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" /><path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="border-top: none">
+        <div class="container">
+          <h1 class="section-title reveal">Blog</h1>
+          <p class="section-subtitle reveal" data-delay="100">Recent articles and thoughts</p>
+          <div class="blog-grid">
+            <article class="card blog-card reveal" data-delay="150">
+              <h2 class="card-title"><a href="#">Notes on Shipping Side Projects</a></h2>
+              <p class="blog-meta">
+                <time datetime="2026-01-12">January 12, 2026</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  4 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                Everything I've learned from finishing (and abandoning) a dozen
+                side projects: scope, momentum, and knowing when to stop.
+              </p>
+              <div class="tags"><span>side-projects</span><span>productivity</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="200">
+              <h2 class="card-title"><a href="#">Kubernetes Networking, Explained Gently</a></h2>
+              <p class="blog-meta">
+                <time datetime="2025-12-03">December 3, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  6 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                Services, ingress, and DNS in a Kubernetes cluster — what
+                actually happens when one pod calls another, minus the jargon.
+              </p>
+              <div class="tags"><span>kubernetes</span><span>networking</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="250">
+              <h2 class="card-title"><a href="#">A Pragmatic Guide to Code Reviews</a></h2>
+              <p class="blog-meta">
+                <time datetime="2025-11-18">November 18, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  3 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                Reviews that catch real bugs without grinding momentum to a
+                halt — what to look at first, and what to let go.
+              </p>
+              <div class="tags"><span>career</span><span>best-practices</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="300">
+              <h2 class="card-title"><a href="#">From Monolith to Modules: A Refactor Story</a></h2>
+              <p class="blog-meta">
+                <time datetime="2025-10-27">October 27, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  5 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                How we split a five-year-old codebase into modules without
+                freezing feature work for a quarter.
+              </p>
+              <div class="tags"><span>architecture</span><span>refactoring</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="350">
+              <h2 class="card-title"><a href="#">Automating Boring Chores with Scripts</a></h2>
+              <p class="blog-meta">
+                <time datetime="2025-09-15">September 15, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  4 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                A collection of small scripts that quietly save an hour every
+                week — file cleanup, report generation, and backup sweeps.
+              </p>
+              <div class="tags"><span>automation</span><span>tooling</span></div>
+            </article>
+
+            <article class="card blog-card reveal" data-delay="400">
+              <h2 class="card-title"><a href="#">Why I Still Write SQL by Hand</a></h2>
+              <p class="blog-meta">
+                <time datetime="2025-08-02">August 2, 2025</time>
+                <span class="dot-sep">•</span>
+                <span class="read-time">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  5 min read
+                </span>
+              </p>
+              <p class="card-desc">
+                ORMs are great — until they aren't. Where hand-written queries
+                still earn their keep, and how to keep them maintainable.
+              </p>
+              <div class="tags"><span>databases</span><span>sql</span></div>
+            </article>
+          </div>
+          <div class="blog-more">
+            <a href="index.html" class="btn btn-outline">
+              Back to Home
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Alex Carter</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://github.com/alex-carter" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="blog.html">Blog</a>
+          <a href="mailto:alex.carter@example.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
